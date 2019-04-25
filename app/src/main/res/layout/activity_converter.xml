@@ -12,6 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/text_value"
+        android:textStyle="bold"
         />
 
     <EditText
@@ -19,6 +20,7 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:id="@+id/inputNumber"
+        android:gravity="center_horizontal"
         />
 
     <LinearLayout
@@ -58,14 +60,14 @@
         android:paddingTop="40dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/converted_value"/>
+        android:text="@string/converted_value"
+        android:textStyle="bold"/>
 
-    <EditText
-        android:layout_width="150dp"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="number"
-        android:clickable="false"
-        android:enabled="false"
-        android:id="@+id/outputNumber"/>
+        android:id="@+id/outputNumber"
+        android:textSize="22sp"
+        android:textStyle="bold"/>
 
 </LinearLayout>
