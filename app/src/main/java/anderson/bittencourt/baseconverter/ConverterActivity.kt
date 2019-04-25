@@ -61,6 +61,7 @@ class ConverterActivity : AppCompatActivity(), IConverterContract.View {
         when(spinnerFromSelected){
             BIN ->{
                 when(spinnerToSelected){
+                    BIN -> convertedValue.text = inputNumber.text
                     DEC -> convertedValue.text = presenter.binToDec(inputNumber.text.toString())
                     else -> notifyNotImplemented()
                 }
@@ -68,6 +69,7 @@ class ConverterActivity : AppCompatActivity(), IConverterContract.View {
             DEC ->{
                 when(spinnerToSelected){
                     BIN -> convertedValue.text = presenter.decToBin(inputNumber.text.toString())
+                    DEC -> convertedValue.text = inputNumber.text
                     HEX -> convertedValue.text = presenter.decToHex(inputNumber.text.toString())
                     else -> notifyNotImplemented()
                 }
@@ -75,6 +77,7 @@ class ConverterActivity : AppCompatActivity(), IConverterContract.View {
             HEX ->{
                 when(spinnerToSelected){
                     DEC -> convertedValue.text = presenter.hexToDec(inputNumber.text.toString())
+                    HEX -> convertedValue.text = inputNumber.text
                     else -> notifyNotImplemented()
                 }
             }
