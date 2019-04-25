@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Base Converter</string>
+    <string name="text_value">Valor a ser convertido</string>
+    <string name="to">to</string>
+    <string name="button_convert">Converter</string>
+    <string name="converted_value">Valor Convertido</string>
+
+    <string-array name="spinnerOptions">
+        <item>BIN</item>
+        <item>DEC</item>
+        <item>HEX</item>
+    </string-array>
+</resources>
