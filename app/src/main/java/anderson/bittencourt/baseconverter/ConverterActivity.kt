@@ -61,16 +61,16 @@ class ConverterActivity : AppCompatActivity(), IConverterContract.View {
         when(spinnerFromSelected){
             BIN ->{
                 when(spinnerToSelected){
-                    BIN -> convertedValue.text = inputNumber.text
-                    DEC -> convertedValue.text = presenter.binToDec(inputNumber.text.toString())
+                    BIN -> outputNumber.text = inputNumber.text
+                    DEC -> outputNumber.text = presenter.binToDec(inputNumber.text.toString())
                     else -> notifyNotImplemented()
                 }
             }
             DEC ->{
                 when(spinnerToSelected){
-                    BIN -> convertedValue.text = presenter.decToBin(inputNumber.text.toString())
-                    DEC -> convertedValue.text = inputNumber.text
-                    HEX -> convertedValue.text = presenter.decToHex(inputNumber.text.toString())
+                    BIN -> outputNumber.text = presenter.decToBin(inputNumber.text.toString())
+                    DEC -> outputNumber.text = inputNumber.text
+                    HEX -> outputNumber.text = presenter.decToHex(inputNumber.text.toString())
                     else -> notifyNotImplemented()
                 }
             }
