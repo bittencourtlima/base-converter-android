@@ -87,7 +87,6 @@ class ConverterActivity : AppCompatActivity(), IConverterContract.View {
 
     private fun notifyNotImplemented() {
         Toast.makeText(this, "Não implementado", Toast.LENGTH_SHORT).show()
-        convertedValue.text = "ERRO"
     }
 
     override fun showNumberConverted(number: String) {
